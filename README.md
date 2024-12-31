@@ -5,6 +5,18 @@ Bases of Equivariant Spaces* (arXiv: https://arxiv.org/abs/2412.18263). It can g
 
 The only external dependency packages are PyTorch and e3nn. The e3nn package can be easily installed using the command `pip install --upgrade e3nn`. The code can run on any computer with Python version $>$ 3.0.0 and PyTorch version $>$ 1.0. The code for generating the basis for $SU(2)$ does not require the e3nn package. However, the code for generating Clebsch-Gordan (CG) coefficients is borrowed from http://qutip.org/docs/3.1.0/modules/qutip/utilities.html. The CG coefficients for $SU(n)$ can be obtained from https://homepages.physik.uni-muenchen.de/~vondelft/Papers/ClebschGordan/. The code for generating these coefficients is detailed on pages 19–34 of their paper (arXiv: https://arxiv.org/pdf/1009.0437). 
 
+## Usage
+
+`ICT_decomp.py`: ICT decomposition matrices generation (Algorithm 1 in the paper).
+
+`equivariant_bases.py`: Generate equivariant basis for $Hom_{O(3)}(S,S^\prime)$ (Algorithm 2).
+
+`equivariant_bases_end.py`: Generate equivariant basis for $End_{O(3)}((ℝ^3)^{\otimes n})$.
+
+`equivariant_bases_su(2).py`: Generate equivariant basis for $Hom_{SU(2)}(S,S^\prime)$ (Algorithm 2).
+
+`*_algo4.py`: Efficient implementation with Algorithm 4.
+
 ## Contact
 
 If you have any techniqual question, please open an issue or send email to shaoshihao@pku.edu.cn.
