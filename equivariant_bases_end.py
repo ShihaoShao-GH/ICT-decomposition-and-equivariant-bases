@@ -32,6 +32,6 @@ def equivariant_basis_generation(n_total : int) -> List[torch.Tensor]:
         for ind2, path2 in enumerate(path_list):
             if path[-1] == path2[-1] and ind !=ind2:
                 parameter = torch.nn.Parameter(torch.rand(1))
-                equiv_basis_matrix+=(pathmatrices_list[ind] @ pathmatrices_list[ind].T)*parameter
+                equiv_basis_matrix+=(pathmatrices_list[ind] @ pathmatrices_list[ind2].T)*parameter
                 param_list.append(parameter)
     return equiv_basis_matrix, param_list
